@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Voice Scribe</h1>
+            <p>音声をリアルタイムでテキストに変換します</p>
+        </header>
+
+        <div class="transcription-area">
+            <div id="result-text" class="result-text" contenteditable="true" placeholder="ここに文字起こしされたテキストが表示されます...">
+            </div>
+            <div class="status-indicator" id="status-indicator">
+                <span class="status-dot"></span>
+                <span id="status-text">待機中</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="toggle-btn" class="control-btn primary-btn" aria-label="録音開始">
+                <span class="material-icons-round" id="mic-icon">mic</span>
+                <span class="btn-text" id="btn-text">録音開始</span>
+            </button>
+            <button id="copy-btn" class="control-btn secondary-btn" aria-label="テキストをコピー" title="クリップボードにコピー">
+                <span class="material-icons-round">content_copy</span>
+            </button>
+            <button id="paste-btn" class="control-btn secondary-btn" aria-label="テキストを貼り付け" title="クリップボードから貼り付け">
+                <span class="material-icons-round">content_paste</span>
+            </button>
+            <button id="clear-btn" class="control-btn secondary-btn" aria-label="クリア" title="テキストを消去">
+                <span class="material-icons-round">delete_outline</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+
+</html>
