@@ -56,6 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
         updateUIState(false);
     };
 
+    const setCursorToEnd = (element) => {
+        element.focus();
+        const range = document.createRange();
+        range.selectNodeContents(element);
+        range.collapse(false);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+    };
+
     const updateUIState = (recording) => {
         if (recording) {
             toggleBtn.classList.add('recording');
@@ -69,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
             micIcon.textContent = 'mic';
             btnText.textContent = '録音開始';
             statusText.textContent = '待機中';
+            // 録音停止時にカーソルを末尾に移動
+            setCursorToEnd(resultText);
         }
     };
 

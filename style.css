@@ -1,17 +1,22 @@
 :root {
-    --bg-color: #050505;
-    --text-color: #ffffff;
-    --text-muted: #a1a1aa;
-    --primary-color: #4f46e5;
-    /* Indigo */
-    --primary-hover: #4338ca;
-    --accent-color: #06b6d4;
-    /* Cyan */
-    --accent-glow: rgba(6, 182, 212, 0.5);
+    --bg-color: #022c22;
+    /* Deep Emerald */
+    --text-color: #ecfdf5;
+    /* Mint Cream */
+    --text-muted: #6ee7b7;
+    /* Emerald 300 */
+    --primary-color: #10b981;
+    /* Emerald 500 */
+    --primary-hover: #059669;
+    /* Emerald 600 */
+    --accent-color: #34d399;
+    /* Emerald 400 */
+    --accent-glow: rgba(52, 211, 153, 0.5);
     --danger-color: #ef4444;
     --danger-glow: rgba(239, 68, 68, 0.5);
-    --glass-bg: rgba(20, 20, 30, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(6, 78, 59, 0.6);
+    /* Emerald 900 glass */
+    --glass-border: rgba(255, 255, 255, 0.1);
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -27,6 +32,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     min-height: 100vh;
+    min-height: 100dvh;
+    /* Dynamic viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +50,7 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    background: radial-gradient(circle at center, #1e1b4b 0%, #000000 100%);
+    background: radial-gradient(circle at center, #064e3b 0%, #022c22 100%);
 }
 
 .blob {
@@ -59,7 +66,7 @@ body {
     left: -10%;
     width: 60vw;
     height: 60vw;
-    background: linear-gradient(to right, var(--primary-color), #8b5cf6);
+    background: linear-gradient(to right, var(--primary-color), #34d399);
     animation-delay: 0s;
 }
 
@@ -68,7 +75,7 @@ body {
     right: -10%;
     width: 50vw;
     height: 50vw;
-    background: linear-gradient(to left, #ec4899, var(--primary-color));
+    background: linear-gradient(to left, #10b981, #065f46);
     animation-delay: -5s;
     animation-duration: 20s;
 }
@@ -78,7 +85,7 @@ body {
     left: 30%;
     width: 40vw;
     height: 40vw;
-    background: linear-gradient(to bottom, var(--accent-color), #3b82f6);
+    background: linear-gradient(to bottom, var(--accent-color), #047857);
     animation-delay: -8s;
     opacity: 0.4;
 }
@@ -122,12 +129,12 @@ body {
 .app-header h1 {
     font-size: 3rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
+    background: linear-gradient(135deg, #fff 0%, #a7f3d0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
-    text-shadow: 0 0 30px rgba(165, 243, 252, 0.3);
+    text-shadow: 0 0 30px rgba(167, 243, 208, 0.3);
 }
 
 .app-header p {
@@ -140,7 +147,7 @@ body {
 /* Transcription Area */
 .transcription-area {
     flex: 1;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     border: 1px solid var(--glass-border);
     padding: 2rem;
@@ -154,7 +161,7 @@ body {
 
 .transcription-area:focus-within {
     border-color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.15),
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.15),
         inset 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -164,8 +171,8 @@ body {
     background: transparent;
     border: none;
     color: var(--text-color);
-    font-size: 1.8rem;
-    /* Increased font size significantly */
+    font-size: 0.9rem;
+    /* Reduced font size */
     line-height: 1.6;
     resize: none;
     outline: none;
@@ -294,14 +301,12 @@ body {
 }
 
 .primary-btn {
-    background: linear-gradient(135deg, var(--primary-color), #6366f1);
+    background: linear-gradient(135deg, var(--primary-color), #059669);
     color: white;
     padding: 1.8rem 4rem;
-    /* Significantly larger padding */
     font-size: 1.5rem;
-    /* Larger font size */
     gap: 1rem;
-    box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.5),
+    box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     min-width: 280px;
@@ -309,12 +314,11 @@ body {
 
 .primary-btn .material-icons-round {
     font-size: 2rem;
-    /* Larger icon */
 }
 
 .primary-btn:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.6),
+    box-shadow: 0 20px 40px -5px rgba(16, 185, 129, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -368,7 +372,8 @@ body {
 @media (max-width: 600px) {
     .app-container {
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height */
         border-radius: 0;
         border: none;
         padding: 1.5rem;
@@ -379,8 +384,8 @@ body {
     }
 
     .result-text {
-        font-size: 1.4rem;
-        /* Still large on mobile */
+        font-size: 0.9rem;
+        /* Reduced font size */
     }
 
     .controls {
@@ -393,7 +398,6 @@ body {
         font-size: 1.3rem;
         width: 100%;
         order: -1;
-        /* Ensure it's at the top or prominent */
         margin-bottom: 1rem;
     }
 

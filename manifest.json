@@ -4,8 +4,8 @@
     "description": "シンプルで美しい音声入力文字起こしアプリ",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#0f172a",
-    "theme_color": "#0f172a",
+    "background_color": "#022c22",
+    "theme_color": "#022c22",
     "orientation": "portrait",
     "icons": [
         {
